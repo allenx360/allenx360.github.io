@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS dinner | Allen&#39;s world</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="The teacher help us practice “CSS” in another way.This is a link below:https://flukeout.github.io/ So,there is some points i can improve: 1.Adjacent Sibling SelectorSelect an element that directly fol">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS dinner">
+<meta property="og:url" content="http://allenx360.github.io/2017/09/09/css-dinner/index.html">
+<meta property="og:site_name" content="Allen&#39;s world">
+<meta property="og:description" content="The teacher help us practice “CSS” in another way.This is a link below:https://flukeout.github.io/ So,there is some points i can improve: 1.Adjacent Sibling SelectorSelect an element that directly fol">
+<meta property="og:updated_time" content="2017-09-09T16:40:33.600Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS dinner">
+<meta name="twitter:description" content="The teacher help us practice “CSS” in another way.This is a link below:https://flukeout.github.io/ So,there is some points i can improve: 1.Adjacent Sibling SelectorSelect an element that directly fol">
+  
+    <link rel="alternate" href="/atom.xml" title="Allen&#39;s world" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Allen&#39;s world</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://allenx360.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-css-dinner" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/09/css-dinner/" class="article-date">
+  <time datetime="2017-09-09T15:34:30.000Z" itemprop="datePublished">2017-09-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS dinner
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The teacher help us practice “CSS” in another way.<br>This is a link below:<br><a href="https://flukeout.github.io/" target="_blank" rel="external">https://flukeout.github.io/</a></p>
+<p>So,there is some points i can improve:</p>
+<p></p><h1>1.Adjacent Sibling Selector</h1><br>Select an element that directly follows another element<p></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">A + B</div></pre></td></tr></table></figure>
+<p>This selects all B elements that directly follow A. Elements that follow one another are called siblings. They’re on the same level, or depth. </p>
+<p>In the HTML markup for this level, elements that have the same indentation are siblings.</p>
+<p><b>Examples:</b><br>p + .intro selects every element with class=”intro” that directly follows a p<br>div + a selects every a element that directly follows a div</p>
+<p></p><h1>2.General Sibling Selector</h1><br>Select elements that follows another element<p></p>
+<pre><code class="bash">A ~ B
+</code></pre>
+<p>You can select all siblings of an element that follow it. This is like the Adjacent Selector (A + B) except it gets all of the following elements instead of one.</p>
+<p><b>Examples:</b><br>A ~ B selects all B that follow a A</p>
+<p></p><h1>3.Child Selector</h1><br>Select direct children of an element<p></p>
+<pre><code class="bash">A &gt; B
+</code></pre>
+<p>You can select elements that are direct children of other elements. A child element is any element that is nested directly in another element. </p>
+<p>Elements that are nested deeper than that are called descendant elements.</p>
+<p><b>Examples:</b><br>A &gt; B selects all B that are a direct children A</p>
+<p></p><h1>4.Last Child Pseudo-selector</h1><br>Select the last element inside of another element<p></p>
+<pre><code class="bash">:last-child
+</code></pre>
+<p>You can use this selector to select an element that is the last child element inside of another element. </p>
+<blockquote><br>Pro Tip →<br>In cases where there is only one element, that element counts as the first-child, only-child and last-child!<br></blockquote>
+
+<p><b>Examples:</b><br>:last-child selects all last-child elements.<br>span:last-child selects all last-child span elements.<br>ul li:last-child selects the last li elements inside of any ul.</p>
+<p></p><h1>5.First of Type Selector</h1><br>Select the first element of a specific type<p></p>
+<pre><code class="bash">:first-of-type
+</code></pre>
+<p>Selects the first element of that type <mark>within another element.</mark></p>
+<p><b>Examples:</b><br>span:first-of-type selects the first span in any element.</p>
+<p></p><h1>6.Attribute Selector</h1><br>Select all elements that have a specific attribute<p></p>
+<pre><code class="bash">[attribute]
+</code></pre>
+<p>Attributes appear inside the opening tag of an element, like this: span attribute=”value”. An attribute does not always have a value, it can be blank!</p>
+<p><b>Examples:</b><br>a[href] selects all a elements that have a href=”anything” attribute.<br>[type] selects all elements that have a type=”anything”. attribute</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allenx360.github.io/2017/09/09/css-dinner/" data-id="cj7dkm5d40001jowbjefqxo6h" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/08/first/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">first</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/09/09/css-dinner/">CSS dinner</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/08/first/">first</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/08/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Allen Chang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
