@@ -25,9 +25,15 @@ margin: 0;
 
 .pages{
 	width: 300px;
-	height: 300px;
-	
+	height: 250px;
+	 margin: 20px;
 }
+.pages:hover {
+    box-shadow:10px 10px 10px 1px #665066;  
+    transition: 0.3s;
+     filter: brightness(150%);
+}
+
 
 .text p {
 	color: white
