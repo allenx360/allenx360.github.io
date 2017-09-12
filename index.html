@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://allenx360.github.io"></form>
@@ -60,6 +60,46 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-CSS-flex" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/12/CSS-flex/" class="article-date">
+  <time datetime="2017-09-12T03:38:22.000Z" itemprop="datePublished">2017-09-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/12/CSS-flex/">CSS-flex</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>以下文章參考<br><a href="http://www.oxxostudio.tw/articles/201501/css-flexbox.html" target="_blank" rel="external">深入解析 CSS Flexbox</a></p>
+<p>這被廣泛利用在RWD裡，</p>
+<p><img src="/css/images/flex.jpg" alt="flex"></p>
+<p>大概分五種:</p>
+<li>display</li><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">display:flex</div></pre></td></tr></table></figure><br><br><li>flex-direction:排列方向</li><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.flex-row&#123;</div><div class="line">flex-direction:row;//預設值，由左到右，從上到下</div><div class="line">&#125;</div><div class="line">.flex-row-reverse&#123;</div><div class="line">flex-direction:row-reverse;//與 row 相反</div><div class="line">&#125;</div><div class="line">.flex-column&#123;</div><div class="line">flex-direction:column;//從上到下，再由左到右</div><div class="line">&#125;</div><div class="line">.flex-column-reverse&#123;</div><div class="line">flex-direction:column-reverse;//與 column 相反</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><li>justify-content:水平對齊</li><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.flex-start&#123;</div><div class="line">justify-content:flex-start;</div><div class="line">&#125;</div><div class="line">.flex-end&#123;</div><div class="line">justify-content:flex-end;</div><div class="line">&#125;</div><div class="line">.center&#123;</div><div class="line">justify-content:center;</div><div class="line">&#125;</div><div class="line">.space-between&#123;</div><div class="line">justify-content:space-between;</div><div class="line">&#125;</div><div class="line">.space-around&#123;</div><div class="line">justify-content:space-around;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><li>align-items:垂直對齊</li><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">.flex-start&#123;</div><div class="line">align-items:flex-start;</div><div class="line">&#125;</div><div class="line">.flex-end&#123;</div><div class="line">align-items:flex-end;</div><div class="line">&#125;</div><div class="line">.center&#123;</div><div class="line">align-items:center;</div><div class="line">&#125;</div><div class="line">.stretch&#123;</div><div class="line">align-items:stretch;</div><div class="line">&#125;</div><div class="line">.baseline&#123;</div><div class="line">align-items:baseline;</div><div class="line">&#125;</div><div class="line">.flex-item&#123;</div><div class="line">width:60px;</div><div class="line">text-align:center;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><li>align-self</li><br><br><br><li>align-content:多行設定</li><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">.flex-start&#123;</div><div class="line">align-content:flex-start;//預設值，對齊最上面的 cross start</div><div class="line">&#125;</div><div class="line">.flex-end&#123;</div><div class="line">align-content:flex-end;//對齊最下面的 cross end</div><div class="line">&#125;</div><div class="line">.center&#123;</div><div class="line">align-content:center;//垂直置中</div><div class="line">&#125;</div><div class="line">.space-between&#123;</div><div class="line">align-content:space-between;//將第一行與最後一行分別對齊最上方與最下方</div><div class="line">&#125;</div><div class="line">.space-around&#123;</div><div class="line">align-content:space-around;//每行平均分配間距</div><div class="line">&#125;</div><div class="line">.stretch&#123;</div><div class="line">align-content:stretch;//內容元素全部撐開</div></pre></td></tr></table></figure><br><br><li>flex-wrap:內容的元素換行</li><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.nowrap&#123;</div><div class="line">flex-wrap:nowrap;//預設</div><div class="line">&#125;</div><div class="line">.wrap&#123;</div><div class="line">flex-wrap:wrap;</div><div class="line">&#125;</div><div class="line">.wrap-reverse&#123;</div><div class="line">flex-wrap:wrap-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><li>order</li><br><br><br><li>flex</li>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allenx360.github.io/2017/09/12/CSS-flex/" data-id="cj7h2l0o700005cwbt7p0uuqb" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-javascript-first-day" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -83,7 +123,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p></p><h3>Today is my first day learning Javascript!</h3><br><br><br><br><br><br><p></p>
+        <p></p><h3>Today is my first day learning Javascript!</h3><br><br><br><br><p></p>
 <h2>HTML Object:</h2><br>Objects are variables too. But objects can contain many values.<br>The values are written as <mark>name:value pairs (name and value separated by a colon).</mark><br>JavaScript objects are containers for named values called <mark>properties or methods.</mark><br>A method is actually a function definition stored as a property value.<br><br><h2>HTML Events:</h2><br><div style="border-style: solid"><br><button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button><br><p id="demo"></p><br></div><br><br><h2>HTML String:</h2>
 
 <p><mark>When using the === operator, equal strings are not equal, because the === operator expects equality in both type and value.</mark></p>
@@ -104,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://allenx360.github.io/2017/09/11/javascript-first-day/" data-id="cj7fyxp750002fgwbayfkxt1d" class="article-share-link">Share</a>
+      <a data-url="http://allenx360.github.io/2017/09/11/javascript-first-day/" data-id="cj7h2l0oo00045cwbc5iwtm04" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -175,7 +215,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://allenx360.github.io/2017/09/09/css-dinner/" data-id="cj7fyxp6p0000fgwbsn9hmezp" class="article-share-link">Share</a>
+      <a data-url="http://allenx360.github.io/2017/09/09/css-dinner/" data-id="cj7h2l0of00015cwbr02t9wkj" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -234,7 +274,7 @@ Merge made by the <span class="string">'recursive'</span> strategy.
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://allenx360.github.io/2017/09/08/first/" data-id="cj7fyxp6z0001fgwb488mpx01" class="article-share-link">Share</a>
+      <a data-url="http://allenx360.github.io/2017/09/08/first/" data-id="cj7h2l0oj00025cwbasy6ntlv" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -279,7 +319,7 @@ Merge made by the <span class="string">'recursive'</span> strategy.
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://allenx360.github.io/2017/09/08/hello-world/" data-id="cj7fyxp790003fgwb7yhrd0us" class="article-share-link">Share</a>
+      <a data-url="http://allenx360.github.io/2017/09/08/hello-world/" data-id="cj7h2l0om00035cwb0z0cyf5z" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -304,7 +344,7 @@ Merge made by the <span class="string">'recursive'</span> strategy.
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
     </div>
@@ -314,9 +354,13 @@ Merge made by the <span class="string">'recursive'</span> strategy.
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/09/12/CSS-flex/">CSS-flex</a>
+          </li>
         
           <li>
             <a href="/2017/09/11/javascript-first-day/">javascript first day</a>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS-flex | Allen&#39;s world</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="以下文章參考深入解析 CSS Flexbox 這被廣泛利用在RWD裡，  大概分五種: display1display:flexflex-direction:排列方向123456789101112.flex-row&amp;#123;flex-direction:row;//預設值，由左到右，從上到下&amp;#125;.flex-row-reverse&amp;#123;flex-direction:row-rever">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS-flex">
+<meta property="og:url" content="http://allenx360.github.io/2017/09/12/CSS-flex/index.html">
+<meta property="og:site_name" content="Allen&#39;s world">
+<meta property="og:description" content="以下文章參考深入解析 CSS Flexbox 這被廣泛利用在RWD裡，  大概分五種: display1display:flexflex-direction:排列方向123456789101112.flex-row&amp;#123;flex-direction:row;//預設值，由左到右，從上到下&amp;#125;.flex-row-reverse&amp;#123;flex-direction:row-rever">
+<meta property="og:image" content="http://allenx360.github.io/css/images/flex.jpg">
+<meta property="og:updated_time" content="2017-09-12T04:15:21.299Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS-flex">
+<meta name="twitter:description" content="以下文章參考深入解析 CSS Flexbox 這被廣泛利用在RWD裡，  大概分五種: display1display:flexflex-direction:排列方向123456789101112.flex-row&amp;#123;flex-direction:row;//預設值，由左到右，從上到下&amp;#125;.flex-row-reverse&amp;#123;flex-direction:row-rever">
+<meta name="twitter:image" content="http://allenx360.github.io/css/images/flex.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Allen&#39;s world" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Allen&#39;s world</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://allenx360.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSS-flex" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/12/CSS-flex/" class="article-date">
+  <time datetime="2017-09-12T03:38:22.000Z" itemprop="datePublished">2017-09-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS-flex
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>以下文章參考<br><a href="http://www.oxxostudio.tw/articles/201501/css-flexbox.html" target="_blank" rel="external">深入解析 CSS Flexbox</a></p>
+<p>這被廣泛利用在RWD裡，</p>
+<p><img src="/css/images/flex.jpg" alt="flex"></p>
+<p>大概分五種:</p>
+<li>display</li><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">display:flex</div></pre></td></tr></table></figure><br><br><li>flex-direction:排列方向</li><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.flex-row&#123;</div><div class="line">flex-direction:row;//預設值，由左到右，從上到下</div><div class="line">&#125;</div><div class="line">.flex-row-reverse&#123;</div><div class="line">flex-direction:row-reverse;//與 row 相反</div><div class="line">&#125;</div><div class="line">.flex-column&#123;</div><div class="line">flex-direction:column;//從上到下，再由左到右</div><div class="line">&#125;</div><div class="line">.flex-column-reverse&#123;</div><div class="line">flex-direction:column-reverse;//與 column 相反</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><li>justify-content:水平對齊</li><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.flex-start&#123;</div><div class="line">justify-content:flex-start;</div><div class="line">&#125;</div><div class="line">.flex-end&#123;</div><div class="line">justify-content:flex-end;</div><div class="line">&#125;</div><div class="line">.center&#123;</div><div class="line">justify-content:center;</div><div class="line">&#125;</div><div class="line">.space-between&#123;</div><div class="line">justify-content:space-between;</div><div class="line">&#125;</div><div class="line">.space-around&#123;</div><div class="line">justify-content:space-around;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><li>align-items:垂直對齊</li><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">.flex-start&#123;</div><div class="line">align-items:flex-start;</div><div class="line">&#125;</div><div class="line">.flex-end&#123;</div><div class="line">align-items:flex-end;</div><div class="line">&#125;</div><div class="line">.center&#123;</div><div class="line">align-items:center;</div><div class="line">&#125;</div><div class="line">.stretch&#123;</div><div class="line">align-items:stretch;</div><div class="line">&#125;</div><div class="line">.baseline&#123;</div><div class="line">align-items:baseline;</div><div class="line">&#125;</div><div class="line">.flex-item&#123;</div><div class="line">width:60px;</div><div class="line">text-align:center;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><li>align-self</li><br><br><br><li>align-content:多行設定</li><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">.flex-start&#123;</div><div class="line">align-content:flex-start;//預設值，對齊最上面的 cross start</div><div class="line">&#125;</div><div class="line">.flex-end&#123;</div><div class="line">align-content:flex-end;//對齊最下面的 cross end</div><div class="line">&#125;</div><div class="line">.center&#123;</div><div class="line">align-content:center;//垂直置中</div><div class="line">&#125;</div><div class="line">.space-between&#123;</div><div class="line">align-content:space-between;//將第一行與最後一行分別對齊最上方與最下方</div><div class="line">&#125;</div><div class="line">.space-around&#123;</div><div class="line">align-content:space-around;//每行平均分配間距</div><div class="line">&#125;</div><div class="line">.stretch&#123;</div><div class="line">align-content:stretch;//內容元素全部撐開</div></pre></td></tr></table></figure><br><br><li>flex-wrap:內容的元素換行</li><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.nowrap&#123;</div><div class="line">flex-wrap:nowrap;//預設</div><div class="line">&#125;</div><div class="line">.wrap&#123;</div><div class="line">flex-wrap:wrap;</div><div class="line">&#125;</div><div class="line">.wrap-reverse&#123;</div><div class="line">flex-wrap:wrap-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><li>order</li><br><br><br><li>flex</li>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allenx360.github.io/2017/09/12/CSS-flex/" data-id="cj7h2l0o700005cwbt7p0uuqb" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/11/javascript-first-day/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">javascript first day</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/09/12/CSS-flex/">CSS-flex</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/11/javascript-first-day/">javascript first day</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/09/css-dinner/">CSS dinner</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/08/first/">first</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/08/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Allen Chang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
