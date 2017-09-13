@@ -101,3 +101,13 @@ a:hover{
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
+.carousel{
+	width: 50%;
+	height:auto;
+}
+
+.carousel img{
+	width: 100%;
+	height:auto;
+}
