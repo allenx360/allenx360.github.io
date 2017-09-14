@@ -54,6 +54,7 @@ a:hover{
     flex-direction: row;
     justify-content: space-around;
     border-radius: 5px;
+   position: relative;
 }
 
 .nav_button{
