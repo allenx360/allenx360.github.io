@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	
+<style>
+
+.fb_container  {
+	text-align: center;
+	background: #A3BB07;
+    display: block;
+    position: fixed;
+    top: 100px;
+    right: -30px;
+    width: 50px;
+    height: 500px;
+    transition: width 1s;
+}
+ .fb_container:hover {
+    width: 375px;
+}
+.fb_text{
+	background: #A3BB07;
+	text-align: center;
+	display: block;
+    position: absolute;
+    left: -50px;
+    padding:0px;
+    width: 50px;
+    height:50px;
+}
+img{
+	 width: 50px;
+    height:50px;
+}
+.fb_text p{
+	    font-family: 微軟正黑體;
+        color: white;
+       font-size: 20px;
+}
+.fb_iframe{
+	display: block;
+    position: absolute;
+	left: 0px;
+	width: 350px;
+    height: 100%;
+}
+
+</style>
+</head>
+
+<body>
+	<div class="fb_container">
+	<div class="fb_text">
+		<img src="F_icon.png" alt="">
+		</div>
+		<div class="fb_iframe">
+		<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FIKEA.HCS%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+		</div>
+	</div>
+</body>
+</html>

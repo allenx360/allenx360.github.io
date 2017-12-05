@@ -36,7 +36,6 @@ a:hover{
 	align-items: center;
 }
 .logo{
-
 	margin: 20px;
 }
 .search{
@@ -52,15 +51,19 @@ a:hover{
 	background: blue;
 	display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
     border-radius: 5px;
-   position: relative;
+    position: relative;
 }
 
 .nav_button{
+	width: 100%;
+	
 	text-align: center;
 	font-weight: bold;
 	padding: 10px 10px;
+
 }
 .nav_item{
 	position: relative;
@@ -106,9 +109,12 @@ a:hover{
 .carousel{
 	width: 50%;
 	height:auto;
+	
 }
 
 .carousel img{
+	
 	width: 100%;
 	height:auto;
 }
+

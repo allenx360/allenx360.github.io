@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+    font-family: verdana, 微軟正黑體;
+}
+div.panel {
+    padding: 5px 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+}
+div.question_box{
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+li.accordion{
+   cursor: pointer;
+   color: blue;
+   font-size: 18px;
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="question_box">
+  <h3>最常見的5個問題</h3>
+  <ol>
+  <li class="accordion">如果我無法自己運送家具怎麼辦?</li>
+    <div class="panel">
+      
+    <p>IKEA大部份的商品都是平整包裝，你可以在商品頁面找到包裝的尺寸大小、重量等相關資訊，方便你在購買後自己搬回家，同時省下更多費用。
+    <br />
+    <br />
+    IKEA大部份的商品都是平整包裝，你可以在商品頁面找到包裝的尺寸大小、重量等相關資訊，方便你在購買後自己搬回家，同時省下更多費用。
+    <a href="http://www.ikea.com/ms/zh_TW/service-offer/delivery/index.html?icid=tw|ic|FAQ|TOP|Q1">點選這裡</a>
+    查詢運送服務的相關詳情。</p>
+                    
+    </div>
+
+    <li class="accordion">我住的地方離IKEA很遠，可以透過傳真訂購IKEA的商品嗎?</li>
+    <div class="panel">
+      <p>我們的各分店有傳真或E-mail訂購服務可以接受訂購。<br />
+        首先<a href="http://www.ikea.com/ms/zh_TW/ikny_splash.html?icid=tw|ic|FAQ|TOP|Q2-1" target="_blank">點選這裡</a>找到離你最近的IKEA分店，下載傳真或E-mail訂購單。<br />
+        接著瀏覽本網站，將你想購買的商品資訊填入傳真或E-mail訂購單中。<br />
+        最後將訂購單傳真或 E-mail 到你選擇的IKEA分店，我們專業服務人員會和你聯絡。<br />
+        進一步洽詢各分店的傳真訂購/E-mail訂購資訊，請點選這裡與各分店連繫。</p>
+    </div>
+
+    <li class="accordion">如何知道我想購買的商品在 IKEA店內有沒有貨?</li>
+    <div class="panel">
+      <p>網站與IKEA Store App上除了有數千種不同設計和價格的IKEA家具家飾商品供你瀏覽。在點入商品的詳細介紹頁面後，你可以使用查詢貨況功能確認想購買商品之貨況。<br />
+      也可以<a href="http://www.ikea.com/tw/zh/catalog/stockcheck/?icid=tw|ic|FAQ|TOP|Q3-1" target="_blank">點選這裡</a>直接輸入你想購買的貨號或產品名稱，確認分店是否有貨。<br />
+      不過因為貨況可能隨時變動，建議你來店之前，來電做最後確認。歡迎<a href="http://www.ikea.com/ms/zh_TW/ikny_splash.html?icid=tw|ic|FAQ|TOP|Q3-2" target="_blank">點選這裡</a>確認各分店連絡方式。</p>
+    </div>
+     <li class="accordion">我購買IKEA家具後，IKEA可以提供組裝服務嗎?</li>
+    <div class="panel">
+      <p>我們的商品除了包裝平整，方便你購買後直接帶走，還有完整的組裝說明，讓你按步驟組裝。<br />
+        當然，你也可以選擇我們專業的組裝服務，為你節省時間。組裝費用為產品售價的 6.5%，其費用未達$400者，最低以$400計算 (廚具、洗手台及窗簾訂製施工費另計)。<br />
+        歡迎<a href="http://www.ikea.com/ms/zh_TW/service-offer/assembly_3/index.html?icid=tw|ic|FAQ|A&amp;D|Q2" target="_blank">點選這裡</a>查詢組裝服務的相關詳情。</p>
+    </div>
+     <li class="accordion">我購買的商品需要退換貨，該怎麼做呢?</li>
+    <div class="panel">
+      <p>在IKEA，如果你對於購買的產品不滿意，你可在180天內(宜家卡卡友可在365天內)，攜帶完好的商品、原始包裝、統一發票及明細(刷卡購買者需信用卡與簽單)到原購買分店退換貨。<br />
+        完整退換貨資訊請<a href="http://www.ikea.com/ms/zh_TW/service-offer/return_policy/index.html?icid=tw|ic|FAQ|product|Q5-1" target="_blank">點選這裡</a>。
+
+      或是你也可以與原購買分店客服連繫確認，請<a href="http://www.ikea.com/ms/zh_TW/ikny_splash.html?icid=tw|ic|FAQ|TOP|Q5-2" target="_blank">點選這裡</a>確認各分店連絡方式。</p>
+    </div>
+  </ol>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+
+    } 
+  }
+}
+</script>
+
+</body>
+</html>
