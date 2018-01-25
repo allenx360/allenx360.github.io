@@ -10,45 +10,62 @@
 
 <body>
 
-
+    <!-- 滑動選項 -->
     <div class="big_container" style="width:667px;">
         <div class="top_nav">
-            <div class="nav_tab">
+
+            <a class="nav_tab" onclick="menutoggle(1)">
                 <div class="restaurant_tab">
-                  
-                        <div class="content">
-                            <h2>顧客餐廳</h2>
-                        </div>
-                 
+                    <div class="content">
+                        <h2>顧客餐廳</h2>
+                    </div>
                 </div>
                 <div class="nav_bar">
-                    <h2><a href="#news">顧客餐廳</a></h2>
+                    <h2>顧客餐廳菜單</h2>
                 </div>
-            </div>
+            </a>
 
-            <div class="nav_tab">
+            <a class="nav_tab" onclick="menutoggle(2)">
                 <div class="sfm_tab">
                     <div class="content">
                         <h2>瑞典美食超市</h2>
                     </div>
                 </div>
                 <div class="nav_bar">
-                    <h2><a href="#cardmember">瑞典美食超市</a></h2>
+                    <h2>瑞典美食超市商品</h2>
                 </div>
-            </div>
+            </a>
 
-            <div class="nav_tab">
+            <a class="nav_tab" onclick="menutoggle(3)">
                 <div class="bistro_tab">
                     <div class="content">
                         <h2>美食小站</h2>
                     </div>
                 </div>
                 <div class="nav_bar">
-                    <h2><a href="#">美食小站</a></h2>
+                    <h2>美食小站菜單</h2>
                 </div>
 
-            </div>
+            </a>
         </div>
+        <!-- menu -->
+
+
+        <div class="menu_container">
+            <div class="menu">
+                <img class="bisto_menu" src="menu/201801_menu_bistro.jpg">
+            </div>
+            <div class="menu">
+                <img class="bisto_menu" src="menu/201801_menu_bistro.jpg">
+            </div>
+            <div class="menu">
+                <img class="bisto_menu" src="menu/201801_menu_bistro.jpg">
+            </div>
+
+        </div>
+
+
+        <!-- news -->
         <img src="news/2018_Q2_news.jpg" id="news" style="width:100%">
 
         <div class="news_div">
@@ -94,12 +111,12 @@
 
         </div>
 
-
+        <!-- card member offer -->
         <img class="card-member-offer" style="width: 100%;" id="cardmember" src="familycard/2018_Q2_familycard_banner.jpg">
         <div class="card-member-offer-list">
             <ul class="function_list">
-                <li><a class="function_tab function_tab_g" onclick="imgtoogle(1)">顧客餐廳卡友商品</a></li>
-                <li><a class="function_tab" onclick="imgtoogle(2)">瑞典美食超市卡友商品</a></li>
+                <li><a class="function_tab function_tab_g" onclick="imgtoggle(1)">顧客餐廳卡友商品</a></li>
+                <li><a class="function_tab" onclick="imgtoggle(2)">瑞典美食超市卡友商品</a></li>
                 <li><a class="function_tab" href="http://www.ikeacard.com.tw/form_page" target="_blank">立即辦卡>>>></a></li>
 
             </ul>
@@ -117,10 +134,34 @@
 
 
     <script>
-    var tab1 = document.getElementsByClassName("function_tab");
+    function menutoggle(n) {
 
-    /*for (var i = 0; i < tab1.length; i++) { tab1[i].addEventListener( "mouseout", function() { this.classList.remove( "function_tab_g"); }); tab1[i].addEventListener( "mouseenter", function() { this.classList.add( "function_tab_g"); }); }*/
-    function imgtoogle(n) {
+        var img = document.getElementsByClassName("menu");
+
+        //console.log(menu_tab.length);
+
+        if (img[n - 1].style.display == "block") {
+            //menu_tab[n - 1].classList.remove("nav_bar_active");
+            img[n - 1].style.display = "none";
+        } else {
+            for (var i = 0; i < img.length; i++) {
+                // menu_tab[i - 1].classList.remove("nav_bar_active");
+                img[i].style.display = "none";
+                //console.log(img[i].style.maxheight);
+            }
+            //menu_tab[n - 1].classList.add("nav_bar_active");
+            img[n - 1].style.display = "block";
+
+            // if (img[n - 1].style.maxHeight) {
+            //     img[n - 1].style.maxHeight = null;
+            // } else {
+            //     img[n - 1].style.maxHeight = img[n - 1].scrollHeight + "px";
+            // }
+
+        }
+    }
+
+    function imgtoggle(n) {
         var tab = document.getElementsByClassName("function_tab");
         var img = document.getElementsByClassName("family_offer");
         for (var i = 0; i < img.length; i++) {
@@ -162,17 +203,18 @@
         dots[slideIndex - 1].className += " active";
         //captionText.innerHTML = dots[slideIndex - 1].alt;
     }
+
     /*滑動選項*/
     var x = document.getElementsByClassName("nav_tab");
     for (i = 0; i < x.length; i++) {
+
         x[i].addEventListener("mouseenter", function() {
             this.classList.add("big_width_tab");
         });
-    }
-    for (i = 0; i < x.length; i++) {
         x[i].addEventListener("mouseleave", function() {
             this.classList.remove("big_width_tab");
         });
+
     }
     </script>
 </body>
