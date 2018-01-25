@@ -9,8 +9,47 @@
 </head>
 
 <body>
+
+
     <div class="big_container" style="width:667px;">
-        <img src="news/2018_Q2_news.jpg" style="width:100%">
+        <div class="top_nav">
+            <div class="nav_tab">
+                <div class="restaurant_tab">
+                  
+                        <div class="content">
+                            <h2>顧客餐廳</h2>
+                        </div>
+                 
+                </div>
+                <div class="nav_bar">
+                    <h2><a href="#news">顧客餐廳</a></h2>
+                </div>
+            </div>
+
+            <div class="nav_tab">
+                <div class="sfm_tab">
+                    <div class="content">
+                        <h2>瑞典美食超市</h2>
+                    </div>
+                </div>
+                <div class="nav_bar">
+                    <h2><a href="#cardmember">瑞典美食超市</a></h2>
+                </div>
+            </div>
+
+            <div class="nav_tab">
+                <div class="bistro_tab">
+                    <div class="content">
+                        <h2>美食小站</h2>
+                    </div>
+                </div>
+                <div class="nav_bar">
+                    <h2><a href="#">美食小站</a></h2>
+                </div>
+
+            </div>
+        </div>
+        <img src="news/2018_Q2_news.jpg" id="news" style="width:100%">
 
         <div class="news_div">
             <div class="news_img">
@@ -56,7 +95,7 @@
         </div>
 
 
-        <img class="card-member-offer" style="width: 100%;" src="familycard/2018_Q2_familycard_banner.jpg">
+        <img class="card-member-offer" style="width: 100%;" id="cardmember" src="familycard/2018_Q2_familycard_banner.jpg">
         <div class="card-member-offer-list">
             <ul class="function_list">
                 <li><a class="function_tab function_tab_g" onclick="imgtoogle(1)">顧客餐廳卡友商品</a></li>
@@ -122,6 +161,18 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
         //captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+    /*滑動選項*/
+    var x = document.getElementsByClassName("nav_tab");
+    for (i = 0; i < x.length; i++) {
+        x[i].addEventListener("mouseenter", function() {
+            this.classList.add("big_width_tab");
+        });
+    }
+    for (i = 0; i < x.length; i++) {
+        x[i].addEventListener("mouseleave", function() {
+            this.classList.remove("big_width_tab");
+        });
     }
     </script>
 </body>
