@@ -9,11 +9,9 @@
 </head>
 
 <body>
-
-    <!-- 滑動選項 -->
-    <div class="big_container" style="width:667px;">
+    <div class="big_container">
+        <!-- 滑動選項 -->
         <div class="top_nav">
-
             <a class="nav_tab" onclick="menutoggle(1)">
                 <div class="restaurant_tab">
                     <div class="content">
@@ -24,7 +22,6 @@
                     <h2>顧客餐廳菜單</h2>
                 </div>
             </a>
-
             <a class="nav_tab" onclick="menutoggle(2)">
                 <div class="sfm_tab">
                     <div class="content">
@@ -35,7 +32,6 @@
                     <h2>瑞典美食超市商品</h2>
                 </div>
             </a>
-
             <a class="nav_tab" onclick="menutoggle(3)">
                 <div class="bistro_tab">
                     <div class="content">
@@ -45,12 +41,9 @@
                 <div class="nav_bar">
                     <h2>美食小站菜單</h2>
                 </div>
-
             </a>
         </div>
         <!-- menu -->
-
-
         <div class="menu_container">
             <div class="menu">
                 <img class="bisto_menu" src="menu/201801_menu_bistro.jpg">
@@ -61,78 +54,63 @@
             <div class="menu">
                 <img class="bisto_menu" src="menu/201801_menu_bistro.jpg">
             </div>
-
         </div>
-
-
         <!-- news -->
-        <img src="news/2018_Q2_news.jpg" id="news" style="width:100%">
-
-        <div class="news_div">
-            <div class="news_img">
-                <div class="img_text">1/4</div>
-                <img src="news/2018_Q2_Kidsmeal.jpg" style="width:100%">
-            </div>
-            <div class="news_img">
-                <div class="img_text">2/4</div>
-                <img src="news/2018_Q2_BTI-1-2-3.jpg" style="width:100%">
-            </div>
-            <div class="news_img">
-                <div class="img_text">3/4</div>
-                <img src="news/2018_Q2_breakfast combo.jpg" style="width:100%">
-            </div>
-            <div class="news_img">
-                <div class="img_text">4/4</div>
-                <img src="news/2018_Q2_afternoonteacombo.jpg" style="width:100%">
-            </div>
-            <div class="caption-container">
-                <p id="caption"></p>
-            </div>
-
-
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-
-            <div class="row">
-                <div class="column">
-                    <img class="demo cursor" src="news/2018_Q2_Kidsmeal.jpg" style="width:100%" onclick="currentSlide(1)">
+        <div>
+            <img src="news/2018_Q2_news.jpg" id="news" style="width:100%">
+            <div class="news_div">
+                <div class="news_img">
+                    <div class="img_text">1/4</div>
+                    <img src="news/2018_Q2_Kidsmeal.jpg" style="width:100%">
                 </div>
-                <div class="column">
-                    <img class="demo cursor" src="news/2018_Q2_BTI-1-2-3.jpg" style="width:100%" onclick="currentSlide(2)">
+                <div class="news_img">
+                    <div class="img_text">2/4</div>
+                    <img src="news/2018_Q2_BTI-1-2-3.jpg" style="width:100%">
                 </div>
-                <div class="column">
-                    <img class="demo cursor" src="news/2018_Q2_breakfast combo.jpg" style="width:100%" onclick="currentSlide(3)">
+                <div class="news_img">
+                    <div class="img_text">3/4</div>
+                    <img src="news/2018_Q2_breakfast combo.jpg" style="width:100%">
                 </div>
-                <div class="column">
-                    <img class="demo cursor" src="news/2018_Q2_afternoonteacombo.jpg" style="width:100%" onclick="currentSlide(4)">
+                <div class="news_img">
+                    <div class="img_text">4/4</div>
+                    <img src="news/2018_Q2_afternoonteacombo.jpg" style="width:100%">
+                </div>
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="news/2018_Q2_Kidsmeal.jpg" style="width:100%" onclick="currentSlide(1)">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="news/2018_Q2_BTI-1-2-3.jpg" style="width:100%" onclick="currentSlide(2)">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="news/2018_Q2_breakfast combo.jpg" style="width:100%" onclick="currentSlide(3)">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="news/2018_Q2_afternoonteacombo.jpg" style="width:100%" onclick="currentSlide(4)">
+                    </div>
                 </div>
             </div>
-
-
         </div>
-
         <!-- card member offer -->
-        <img class="card-member-offer" style="width: 100%;" id="cardmember" src="familycard/2018_Q2_familycard_banner.jpg">
-        <div class="card-member-offer-list">
-            <ul class="function_list">
-                <li><a class="function_tab function_tab_g" onclick="imgtoggle(1)">顧客餐廳卡友商品</a></li>
-                <li><a class="function_tab" onclick="imgtoggle(2)">瑞典美食超市卡友商品</a></li>
-                <li><a class="function_tab" href="http://www.ikeacard.com.tw/form_page" target="_blank">立即辦卡>>>></a></li>
-
-            </ul>
-
+        <div>
+            <img class="card-member-offer" style="width: 100%;" id="cardmember" src="familycard/2018_Q2_familycard_banner.jpg">
+            <div class="card-member-offer-list">
+                <ul class="function_list">
+                    <li><a class="function_tab function_tab_g" onclick="imgtoggle(1)">顧客餐廳卡友商品</a></li>
+                    <li><a class="function_tab" onclick="imgtoggle(2)">瑞典美食超市卡友商品</a></li>
+                    <li><a class="function_tab" href="http://www.ikeacard.com.tw/form_page" target="_blank">立即辦卡>>>></a></li>
+                </ul>
+            </div>
+            <img class="family_offer" src="familycard/2018_Q2_familycard_rest_jan.jpg" style="display: block"></img>
+            <img class="family_offer" src="familycard/2018_Q2_familycard_sfm_jan.jpg" style="display: none"></img>
+            <img class="2018_Q2_meun_banner" style="width: 100%;" src="">
         </div>
-        <img class="family_offer" src="familycard/2018_Q2_familycard_rest_jan.jpg" style="display: block"></img>
-        <img class="family_offer" src="familycard/2018_Q2_familycard_sfm_jan.jpg" style="display: none"></img>
-        <img class="2018_Q2_meun_banner" style="width: 100%;" src="">
-        <div class="menu_contaier">
-
-
-        </div>
-
     </div>
-
-
     <script>
     function menutoggle(n) {
 
