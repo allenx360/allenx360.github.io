@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="0109_restauant.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="big_container">
+
+
+        <div class="news_div">
+            <div class="news_img">
+                <div class="img_text">1/4</div>
+                <img src="news/2018_Q2_Kidsmeal.jpg" style="width:100%">
+            </div>
+            <div class="news_img">
+                <div class="img_text">2/4</div>
+                <img src="news/2018_Q2_BTI-1-2-3.jpg" style="width:100%">
+            </div>
+            <div class="news_img">
+                <div class="img_text">3/4</div>
+                <img src="news/2018_Q2_breakfast combo.jpg" style="width:100%">
+            </div>
+            <div class="news_img">
+                <div class="img_text">4/4</div>
+                <img src="news/2018_Q2_afternoonteacombo.jpg" style="width:100%">
+            </div>
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="news/2018_Q2_Kidsmeal.jpg" style="width:100%" onclick="currentSlide(1)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="news/2018_Q2_BTI-1-2-3.jpg" style="width:100%" onclick="currentSlide(2)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="news/2018_Q2_breakfast combo.jpg" style="width:100%" onclick="currentSlide(3)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="news/2018_Q2_afternoonteacombo.jpg" style="width:100%" onclick="currentSlide(4)">
+                </div>
+            </div>
+
+        </div>
+        <!-- 滑動選項 -->
+        <div class="top_nav">
+            <div class="nav_tab">
+                <div class="restaurant_tab">
+                    <div class="content">
+                        <h2>顧客餐廳</h2>
+                    </div>
+                </div>
+                <div class="nav_bar">
+                    <h2><a href="0109_restaurant.html#c1">顧客餐廳</a></h2>
+                </div>
+            </div>
+
+            <div class="nav_tab">
+                <div class="sfm_tab">
+                    <div class="content">
+                        <h2>瑞典美食超市</h2>
+                    </div>
+                </div>
+                <div class="nav_bar">
+                    <h2><a href="#">瑞典美食超市</a></h2>
+                </div>
+            </div>
+
+            <div class="nav_tab">
+                <div class="bistro_tab">
+                    <div class="content">
+                        <h2>美食小站</h2>
+                    </div>
+                </div>
+                <div class="nav_bar">
+                    <h2><a href="#">美食小站</a></h2>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- 無用banner -->
+        <div class="part restaurant">
+            <a href="http://www.mcdonalds.com.tw/tw/ch/food/full_menu/burgers_entrees.html"><img src="螢幕快照 2018-01-10 上午2.52.35.png" style="height:100%;width: 700px;"></a>
+        </div>
+
+        <div class="part sfm" id="c1">
+            <a href=""><img src="螢幕快照 2018-01-10 上午2.45.43 拷貝.png" style="height:100%;width: 700px;"></a>
+        </div>
+
+        <div class="part bistro">
+            <a href="http://www.grazie.com.tw/news"><img src="螢幕快照 2018-01-10 上午2.56.06.png" style="height:100%;width: 700px;"></a>
+        </div>
+        <div class="part bistro">
+        </div>
+
+    </div>
+
+
+    <script>
+    /*news幻燈片*/
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("news_img");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        //captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+
+    /*滑動選項*/
+    var x = document.getElementsByClassName("nav_tab");
+    for (i = 0; i <
+        x.length; i++) { x[i].addEventListener("mouseenter", function() { this.classList.add("big_width_tab"); }); }
+    for (i = 0; i < x.length; i++) { x[i].addEventListener("mouseleave", function() { this.classList.remove("big_width_tab"); }); }
+    </script>
+</body>
+
+</html>
