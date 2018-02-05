@@ -24,14 +24,17 @@
 
         .restaurant_tab {
             background: url('food_0816_nav_restaurant.jpg') no-repeat center center;
+             background-size:contain;
         }
 
         .sfm_tab {
-            background: url('') no-repeat center center;
+            background: url('visual_sfm_02.jpg') no-repeat center center;
+             background-size:contain;
         }
 
         .bistro_tab {
-            background: url('ikea-hotdog-and-drink-meal__1364317249023-s21.jpg') no-repeat center center;
+            background: url('ikea-hotdog.jpg') no-repeat center center;
+           background-size:contain;
         }
 
         .nav_tab div:first-child {
@@ -74,7 +77,8 @@
             box-sizing: border-box;
             padding: 0;
             margin: 0;
-            font-family: Verdana;
+            /* font-family: Verdana; */
+            font-family:Microsoft JhengHei;
         }
 
         img {
