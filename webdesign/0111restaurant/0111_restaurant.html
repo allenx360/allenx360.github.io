@@ -11,6 +11,7 @@
 <body>
     <div class="big_container">
         <!-- 滑動選項 -->
+        <!-- menu -->
         <div class="top_nav">
             <a class="nav_tab" onclick="menutoggle(1)">
                 <div class="restaurant_tab">
@@ -43,21 +44,72 @@
                 </div>
             </a>
         </div>
-        <!-- menu -->
+
         <div class="menu_container">
             <div class="menu">
-                <div class="close_button" onclick="menutoggle(1)"><h1>X</h1></div>
+                <div class="close_button" onclick="menutoggle(1)">
+                    <h1>X</h1>
+                </div>
                 <img class="bisto_menu" style="width:667px;" src="menu/restaurant_menu.png">
             </div>
             <div class="menu">
-                <div class="close_button" onclick="menutoggle(2)"><h1>X</h1></div>
+                <div class="close_button" onclick="menutoggle(2)">
+                    <h1>X</h1>
+                </div>
                 <img class="bisto_menu" style="width:667px;" src="menu/201801_menu_sfm.jpg">
             </div>
             <div class="menu">
-                <div class="close_button" onclick="menutoggle(3)"><h1>X</h1></div>
+                <div class="close_button" onclick="menutoggle(3)">
+                    <h1>X</h1>
+                </div>
                 <img class="bisto_menu" src="menu/201801_menu_bistro.jpg">
             </div>
         </div>
+
+        <script>
+            /*滑動選項*/
+            function menutoggle(n) {
+
+                var img = document.getElementsByClassName("menu");
+
+                //console.log(menu_tab.length);
+
+                if (img[n - 1].style.display == "block") {
+                    //menu_tab[n - 1].classList.remove("nav_bar_active");
+                    img[n - 1].style.display = "none";
+                } else {
+                    for (var i = 0; i < img.length; i++) {
+                        // menu_tab[i - 1].classList.remove("nav_bar_active");
+                        img[i].style.display = "none";
+                        //console.log(img[i].style.maxheight);
+                    }
+                    //menu_tab[n - 1].classList.add("nav_bar_active");
+                    img[n - 1].style.display = "block";
+
+                    // if (img[n - 1].style.maxHeight) {
+                    //     img[n - 1].style.maxHeight = null;
+                    // } else {
+                    //     img[n - 1].style.maxHeight = img[n - 1].scrollHeight + "px";
+                    // }
+
+                }
+            }
+
+            var x = document.getElementsByClassName("nav_tab");
+            for (i = 0; i < x.length; i++) {
+
+                x[i].addEventListener("mouseenter", function () {
+                    this.classList.add("big_width_tab");
+                });
+
+
+                x[i].addEventListener("mouseleave", function () {
+                    this.classList.remove("big_width_tab");
+                });
+
+            }
+        </script>
+
         <!-- news -->
         <div>
             <img src="news/2018_Q2_news.jpg" id="news" style="width:100%">
@@ -99,14 +151,60 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            /*news幻燈片*/
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("news_img");
+                var dots = document.getElementsByClassName("demo");
+                //var captionText = document.getElementById("caption");
+                //如果編碼大於圖片數量就會變ㄧ
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                //captionText.innerHTML = dots[slideIndex - 1].alt;
+            }
+        </script>
+
+
+
         <!-- card member offer -->
         <div>
             <img class="card-member-offer" style="width: 100%;" id="cardmember" src="familycard/2018_Q2_familycard_banner.jpg">
             <div class="card-member-offer-list">
                 <ul class="function_list">
-                    <li><a class="function_tab function_tab_g" onclick="imgtoggle(1)">顧客餐廳卡友商品</a></li>
-                    <li><a class="function_tab" onclick="imgtoggle(2)">瑞典美食超市卡友商品</a></li>
-                    <li><a class="function_tab" href="http://www.ikeacard.com.tw/form_page" target="_blank">立即辦卡>>>></a></li>
+                    <li>
+                        <a class="function_tab function_tab_g" onclick="imgtoggle(1)">顧客餐廳卡友商品</a>
+                    </li>
+                    <li>
+                        <a class="function_tab" onclick="imgtoggle(2)">瑞典美食超市卡友商品</a>
+                    </li>
+                    <li>
+                        <a class="function_tab" href="http://www.ikeacard.com.tw/form_page" target="_blank">立即辦卡>>>></a>
+                    </li>
                 </ul>
             </div>
             <img class="family_offer" src="familycard/2018_Q2_familycard_rest_jan.jpg" style="display: block"></img>
@@ -114,94 +212,19 @@
             <img class="2018_Q2_meun_banner" style="width: 100%;" src="">
         </div>
     </div>
-    
+
     <script>
-    function menutoggle(n) {
-
-        var img = document.getElementsByClassName("menu");
-
-        //console.log(menu_tab.length);
-
-        if (img[n - 1].style.display == "block") {
-            //menu_tab[n - 1].classList.remove("nav_bar_active");
-            img[n - 1].style.display = "none";
-        } else {
+        function imgtoggle(n) {
+            var tab = document.getElementsByClassName("function_tab");
+            var img = document.getElementsByClassName("family_offer");
             for (var i = 0; i < img.length; i++) {
-                // menu_tab[i - 1].classList.remove("nav_bar_active");
+                tab[i].classList.remove("function_tab_g");
                 img[i].style.display = "none";
-                //console.log(img[i].style.maxheight);
             }
-            //menu_tab[n - 1].classList.add("nav_bar_active");
             img[n - 1].style.display = "block";
-
-            // if (img[n - 1].style.maxHeight) {
-            //     img[n - 1].style.maxHeight = null;
-            // } else {
-            //     img[n - 1].style.maxHeight = img[n - 1].scrollHeight + "px";
-            // }
+            tab[n - 1].classList.add("function_tab_g");
 
         }
-    }
-
-    function imgtoggle(n) {
-        var tab = document.getElementsByClassName("function_tab");
-        var img = document.getElementsByClassName("family_offer");
-        for (var i = 0; i < img.length; i++) {
-            tab[i].classList.remove("function_tab_g");
-            img[i].style.display = "none";
-        }
-        img[n - 1].style.display = "block";
-        tab[n - 1].classList.add("function_tab_g");
-
-    }
-
-    /*news幻燈片*/
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("news_img");
-        var dots = document.getElementsByClassName("demo");
-        //var captionText = document.getElementById("caption");
-        //如果編碼大於圖片數量就會變ㄧ
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        //captionText.innerHTML = dots[slideIndex - 1].alt;
-    }
-
-    /*滑動選項*/
-    var x = document.getElementsByClassName("nav_tab");
-    for (i = 0; i < x.length; i++) {
-
-        x[i].addEventListener("mouseenter", function() {
-            this.classList.add("big_width_tab");
-        });
-
-
-        x[i].addEventListener("mouseleave", function() {
-            this.classList.remove("big_width_tab");
-        });
-
-    }
-
-
     </script>
 </body>
 
