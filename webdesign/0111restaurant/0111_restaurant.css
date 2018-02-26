@@ -24,17 +24,17 @@
 
         .restaurant_tab {
             background: url('food_0816_nav_restaurant.jpg') no-repeat center center;
-             background-size:contain;
+             background-size:auto;
         }
 
         .sfm_tab {
             background: url('visual_sfm_02.jpg') no-repeat center center;
-             background-size:contain;
+            background-size:auto;
         }
 
         .bistro_tab {
             background: url('ikea-hotdog.jpg') no-repeat center center;
-           background-size:contain;
+            background-size:contain;
         }
 
         .nav_tab div:first-child {
@@ -224,6 +224,7 @@
             position: relative;
         }
 
+        
 
         .big_container {
 
@@ -255,4 +256,8 @@
         .close_button:hover{
             transition: 0.4s;
             opacity: 1;
+        }
+
+        .gap{
+            margin-bottom: 10px;
         }
